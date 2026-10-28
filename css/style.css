@@ -1,0 +1,60 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    overflow-x: hidden;
+}
+
+.titulo-principal{
+    font-size: 3.125rem;
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh; 
+    background-color: #d8d8d8;
+}
+
+.foto-container {
+    position: relative;
+    cursor: pointer;
+}
+
+.foto {
+    width: 300px; 
+    max-width: 100%; 
+    height: auto;
+    filter: drop-shadow(0px 10px 15px rgba(0,0,0,0.3));
+    transition: transform 0.3s ease;
+    border-bottom: 3px solid #be6fdd;
+}
+
+.cartel-stats {
+    position: absolute;
+    top: 50%; 
+    left: 110%; 
+    transform: translateY(-50%) scale(0.9);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    padding: 20px;
+    width: 250px;
+    box-shadow: 5px 5px 50px 3px #be6fdd;
+}
+
+.foto-container:hover .cartel-stats {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(-50%) scale(1);
+}
+
+.foto-container:hover .foto {
+    transform: scale(1.05); /* Que la foto también reaccione un poquito */
+}
