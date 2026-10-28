@@ -1,3 +1,8 @@
+*{
+    scroll-behavior: smooth;
+    scrollbar-color:#be6fdd #d8d8d8;
+}
+
 body{
     margin: 0;
     padding: 0;
@@ -28,7 +33,7 @@ body{
     width: 300px; 
     max-width: 100%; 
     height: auto;
-    filter: drop-shadow(0px 10px 15px rgba(0,0,0,0.3));
+    filter: drop-shadow(0px 10px 15px #0000004d);
     transition: transform 0.3s ease;
     border-bottom: 3px solid #be6fdd;
 }
@@ -41,7 +46,7 @@ body{
     opacity: 0;
     visibility: hidden;
     transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
-    background: rgba(255, 255, 255, 0.8);
+    background: #ffffffcc;
     backdrop-filter: blur(10px);
     border-radius: 12px;
     padding: 20px;
@@ -56,5 +61,67 @@ body{
 }
 
 .foto-container:hover .foto {
-    transform: scale(1.05); /* Que la foto también reaccione un poquito */
+    transform: scale(1.05); 
+}
+
+
+
+/*------------------------------------------------------------------------------*/
+
+.album-section {
+    max-width: 1200px;
+    margin: 80px auto; 
+    padding: 0 20px;
+}
+
+.titulo-album {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    color: #333;
+}
+
+.grid-album {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 30px; 
+}
+
+.card-recuerdo {
+    background: #ffffff;
+    border: 1px solid #eaeaea;
+    border-radius: 8px; 
+    padding: 24px;
+    box-shadow: 0 4px 10px #00000008; 
+    transition: transform 0.2s ease;
+}
+
+.card-recuerdo:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 8px 15px #00000014;
+}
+
+.numero-orden {
+    display: block;
+    font-family: serif;
+    font-size: 1.2rem;
+    font-style: italic;
+    color: #be6fdd; 
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.foto-recuerdo {
+    width: 100%;
+    height: 250px; 
+    object-fit: cover; 
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+
+.descripcion-recuerdo {
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.6;
+    margin: 0;
 }
