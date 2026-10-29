@@ -21,7 +21,14 @@ body{
     align-items: center;
     justify-content: center;
     min-height: 100vh; 
-    background-color: #d8d8d8;
+    /* background-color: #d8d8d8; */
+    background-image: url('../img/mari.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh;
+    margin: 0;
 }
 
 .foto-container {
