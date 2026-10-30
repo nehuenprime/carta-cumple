@@ -1,92 +1,105 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
+    <meta name="theme-color" content="#be6fdd">
     <title>Carta para Mamá</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Fraunces:ital,opsz,wght@0,9..144,600;1,9..144,600&family=Nunito:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <header class="hero">
-        <h1 class="titulo-principal">¡Feliz Cumpleaños!</h1>
-        <div class="foto-container">
+        <h1 class="titulo-principal">¡Feliz cumpleaños!</h1>
+
+        <div class="foto-container" id="fotoMama" tabindex="0" role="button" aria-label="Ver las estadísticas de mamá">
             <img src="img/mami.png" alt="Mi vieja" class="foto">
 
             <div class="cartel-stats">
                 <h3>Mamá Nivel 99</h3>
                 <ul>
-                    <li>✨ Especialidad: Encontrar lo que vos no ves</li>
-                    <li>💖 Paciencia: Infinita (casi siempre)</li>
+                    <li>✨ Especialidad: encontrar lo que vos no ves</li>
+                    <li>💖 Paciencia: infinita (casi siempre)</li>
                     <li>🍲 Buff: +50 de energía con su comida</li>
                 </ul>
             </div>
         </div>
+
+        <p class="pista">Pasá el mouse o tocá la foto</p>
+        <a class="bajar" href="#album" aria-label="Ir al álbum">↓</a>
     </header>
+
     <main>
-        <section class="album-section">
+        <section class="album-section" id="album">
             <h2 class="titulo-album">Un poquito de nuestra historia</h2>
             <div class="grid-album">
+                <!-- Escribí el texto de cada recuerdo dentro de su <p>. Si lo dejás vacío, no se muestra. -->
                 <article class="card-recuerdo">
                     <span class="numero-orden">I</span>
-                    <img src="img/recuerdo1.jpeg" alt="Recuerdo 1" class="foto-recuerdo">
+                    <img src="img/recuerdo1.jpeg" alt="Recuerdo 1" class="foto-recuerdo" loading="lazy">
                     <p class="descripcion-recuerdo"></p>
                 </article>
                 <article class="card-recuerdo">
                     <span class="numero-orden">II</span>
-                    <img src="img/recuerdo2.jpeg" alt="Recuerdo 2" class="foto-recuerdo">
+                    <img src="img/recuerdo2.jpeg" alt="Recuerdo 2" class="foto-recuerdo" loading="lazy">
                     <p class="descripcion-recuerdo"></p>
                 </article>
                 <article class="card-recuerdo">
                     <span class="numero-orden">III</span>
-                    <img src="img/recuerdo3.jpeg" alt="Recuerdo 3" class="foto-recuerdo">
+                    <img src="img/recuerdo3.jpeg" alt="Recuerdo 3" class="foto-recuerdo" loading="lazy">
                     <p class="descripcion-recuerdo"></p>
                 </article>
                 <article class="card-recuerdo">
                     <span class="numero-orden">IV</span>
-                    <img src="img/recuerdo4.jpeg" alt="Recuerdo 4" class="foto-recuerdo">
+                    <img src="img/recuerdo4.jpeg" alt="Recuerdo 4" class="foto-recuerdo" loading="lazy">
                     <p class="descripcion-recuerdo"></p>
                 </article>
                 <article class="card-recuerdo">
                     <span class="numero-orden">V</span>
-                    <img src="img/recuerdo5.png" alt="Recuerdo 5" class="foto-recuerdo">
+                    <img src="img/recuerdo5.png" alt="Recuerdo 5" class="foto-recuerdo" loading="lazy">
                     <p class="descripcion-recuerdo"></p>
                 </article>
                 <article class="card-recuerdo">
                     <span class="numero-orden">VI</span>
-                    <img src="img/recuerdo6.jpeg" alt="Recuerdo 6" class="foto-recuerdo">
+                    <img src="img/recuerdo6.jpeg" alt="Recuerdo 6" class="foto-recuerdo" loading="lazy">
                     <p class="descripcion-recuerdo"></p>
                 </article>
                 <article class="card-recuerdo">
                     <span class="numero-orden">VII</span>
-                    <img src="img/recuerdo7.jpeg" alt="Recuerdo 7" class="foto-recuerdo">
+                    <img src="img/recuerdo7.jpeg" alt="Recuerdo 7" class="foto-recuerdo" loading="lazy">
                     <p class="descripcion-recuerdo"></p>
                 </article>
                 <article class="card-recuerdo">
                     <span class="numero-orden">VIII</span>
-                    <img src="img/recuerdo8.jpeg" alt="Recuerdo 8" class="foto-recuerdo">
+                    <img src="img/recuerdo8.jpeg" alt="Recuerdo 8" class="foto-recuerdo" loading="lazy">
                     <p class="descripcion-recuerdo"></p>
                 </article>
                 <article class="card-recuerdo">
                     <span class="numero-orden">IX</span>
-                    <img src="img/recuerdo9.jpeg" alt="Recuerdo 9" class="foto-recuerdo">
+                    <img src="img/recuerdo9.jpeg" alt="Recuerdo 9" class="foto-recuerdo" loading="lazy">
                     <p class="descripcion-recuerdo"></p>
                 </article>
             </div>
-        <section>
+        </section>
+
         <section class="seccion-carta">
-            <div class="sobre-container" id="sobreCarta">
-            
-            <div class="sobre-base"></div> 
-            
-            <div class="papel">
-                <h3>Para la mejor mamá ❤️</h3>
-                <p>Acá va todo el texto emotivo. Podés ponerle scroll interno si escribís mucho, o dejar que la carta crezca hacia arriba.</p>
-            </div>
-            <div class="sobre-frente"></div> 
-            <div class="solapa"></div> 
+            <div class="escena-carta">
+                <div class="sobre-container" id="sobreCarta" tabindex="0" role="button" aria-expanded="false" aria-label="Abrir la carta">
+                    <div class="sobre-base"></div>
+                    <div class="papel">
+                        <h3>Para la mejor mamá ❤️</h3>
+                        <p>Feliz cumple mami, que la pases muy lindo hoy y siempre, te amo mucho, contá conmigo siempre, te deseo todo lo mejor que te pueda pasar ❤️</p>
+                    </div>
+                    <div class="sobre-frente"></div>
+                    <div class="solapa"></div>
+                </div>
+                <p class="pista pista-carta" id="pistaCarta">Tocá el sobre 💌</p>
             </div>
         </section>
     </main>
+
     <script src="script.js"></script>
 </body>
 </html>
